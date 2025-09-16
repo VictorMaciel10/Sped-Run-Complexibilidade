@@ -76,8 +76,8 @@ Redoc:   http://127.0.0.1:8000/redoc
 
 ## 👥 Integrantes do grupo
 - Victor de Souza Maciel  
-- Natan  
-- Ewerton  
+- Nathan de Oliveira Gomes  
+- Everton Matias Cordeiro de Brito  
 
 ---
 
