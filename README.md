@@ -1,101 +1,46 @@
-# Sped-Run-Complexibilidade
+# Speed Run de Complexidade (⚡🏃)
 
-## Speed Run de Complexidade — Backend (Fase 1)
+Joguinho de perguntas & respostas sobre Computabilidade e Complexidade, feito com **FastAPI + SQLModel + SQLite**.  
+Backend serve a API e a página simples em `/static/index.html`.
 
-Backend mínimo em **FastAPI** para o plugin **Speed Run de Complexidade**.  
-Este repositório atende aos requisitos da **Fase 1 (início e preparação)**.
+## Requisitos
+- **Python 3.11+**
+- Windows/Mac/Linux
+- (Opcional) Docker
 
----
+## Como rodar (Windows / Mac / Linux)
 
-## Objetivo
-- Subir um backend FastAPI com endpoint **/health** respondendo **"ok"**.  
-- Fornecer README com **instruções para rodar localmente**.  
-- Publicar no **GitHub** com **branching** básico.
+> Passo a Passo para utilizar
 
----
-
-##  Stack Utilizada
-- **Linguagem:** Python 3.10+  
-- **Framework Web:** FastAPI  
-- **Servidor ASGI:** Uvicorn  
-
----
-
-## 🗂️ Estrutura inicial do projeto
-speedrun-complexidade/
-├─ app/
-│  ├─ __init__.py
-│  └─ routes/            (reservado para rotas futuras)
-├─ tests/                (reservado para testes)
-├─ main.py               (ponto de entrada FastAPI)
-├─ requirements.txt
-├─ .gitignore
-└─ README.md
-
----
-
-## Como rodar localmente
-
-1) Clonar o repositório
+```bash
+# 1) clonar o repositório
 git clone https://github.com/VictorMaciel10/Sped-Run-Complexibilidade.git
-cd Sped-Run-Complexibilidade
+cd https://github.com/VictorMaciel10/Sped-Run-Complexibilidade.git
 
-2) Criar e ativar o ambiente virtual
-Windows (PowerShell):
-python -m venv .venv
+# 2) criar e ativar venv
+# Windows (PowerShell):
+py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
-(se o PowerShell bloquear a execução, abra o CMD e use: .\.venv\Scripts\activate.bat)
 
-macOS / Linux (bash/zsh):
+# Mac/Linux:
 python3 -m venv .venv
 source .venv/bin/activate
 
-3) Instalar dependências
+# 3) instalar dependências
 pip install -r requirements.txt
 
-4) Rodar o servidor FastAPI (Uvicorn)
-uvicorn main:app --reload --port 8000
-A API ficará acessível em: http://127.0.0.1:8000
+# 4) (opcional) criar .env a partir do exemplo
+# (não é obrigatório pra rodar com SQLite)
+copy .env.example .env       # Windows
+# cp .env.example .env       # Mac/Linux
 
-5) Testar o endpoint /health
-Navegador:
-http://127.0.0.1:8000/health
+# 5) (opcional) resetar/semear perguntas
+python -m app.seed
 
-cURL:
-curl http://127.0.0.1:8000/health
-(Resposta esperada: "ok")
+Interface do jogo: http://127.0.0.1:8000/static/index.html
 
-PowerShell:
-Invoke-WebRequest http://127.0.0.1:8000/health | Select-Object -ExpandProperty Content
+Docs da API (Swagger): http://127.0.0.1:8000/docs
 
-Documentação automática:
-Swagger: http://127.0.0.1:8000/docs
-Redoc:   http://127.0.0.1:8000/redoc
-
----
-
-## 👥 Integrantes do grupo
-- Victor de Souza Maciel  
-- Nathan de Oliveira Gomes  
-- Everton Matias Cordeiro de Brito  
-
----
-
-## 🛠️ Branching sugerido
-- main: estável  
-- dev: integrações do time  
-- features: feature/<nome> (ex.: feature/score-calculator)
-
-Comandos iniciais:
-git init
-git add .
-git commit -m "Fase 1: estrutura mínima + /health ok"
-git branch -M main
-git remote add origin https://github.com/VictorMaciel10/Sped-Run-Complexibilidade.git
-git push -u origin main
-
-Criar branch de desenvolvimento:
-git checkout -b dev
-git push -u origin dev
-
-
+Banco é SQLite (speedrun.db) criado automaticamente na raiz do projeto.
+# 6) subir o servidor
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
