@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speed Run de Complexidade</title>
+  <style>
+    body{font-family:Inter,system-ui,Arial;margin:24px;background:#0b1220;color:#e5e7eb}
+    .card{background:#111827;border-radius:16px;padding:20px;box-shadow:0 10px 25px rgba(0,0,0,.35);max-width:840px}
+    button{padding:10px 16px;border-radius:12px;border:0;cursor:pointer}
+    .ok{background:#16a34a;color:white}
+    .warn{background:#f59e0b;color:black}
+    .muted{opacity:.7}
+    .opt{display:block;padding:10px;margin:8px 0;border:1px solid #374151;border-radius:10px;cursor:pointer}
+    .opt:hover{background:#1f2937}
+    .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .pill{padding:6px 10px;border-radius:999px;background:#1f2937}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Speed Run de Complexidade (🏃‍♂️⚡)</h1>
+    <p id="status">1) Cadastre/Login · 2) Launch · 3) Jogue · 4) Finalize</p>
+
+    <div id="auth">
+      <div class="row">
+        <input id="user" placeholder="username" />
+        <input id="pass" type="password" placeholder="password" />
+        <button class="ok" onclick="register()">Registrar</button>
+        <button class="warn" onclick="login()">Login</button>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div class="row">
+      <button onclick="launch()">▶️ Launch</button>
+      <div class="pill">⏱️ Tempo (ms): <span id="elapsed">0</span></div>
+      <div class="pill">⭐ Score total: <span id="total">0</span></div>
+      <div class="pill">Sessão: <span id="sess">-</span></div>
+    </div>
+
+    <h2 id="q-title"></h2>
+    <div id="options"></div>
+
+    <div class="row">
+      <button class="ok" onclick="finalize()">Finalizar /score</button>
+    </div>
+
+    <pre id="log" class="muted"></pre>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
