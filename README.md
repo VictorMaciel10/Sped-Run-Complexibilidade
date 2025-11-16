@@ -3,6 +3,15 @@
 Joguinho de perguntas & respostas sobre Computabilidade e Complexidade, feito com **FastAPI + SQLModel + SQLite**.  
 Backend serve a API e a página simples em `/static/index.html`.
 
+Principais rotas:
+  GET /questions → lista perguntas
+  POST /answer → envia resposta
+  …
+Variáveis de ambiente:
+  DATABASE_URL=…
+  SECRET_KEY=…
+Porta padrão: 8000
+
 ## Requisitos
 - **Python 3.11+**
 - Windows/Mac/Linux
