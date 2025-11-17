@@ -2,6 +2,8 @@
 
 Joguinho gamificado de perguntas & respostas sobre **Computabilidade e Complexidade**, desenvolvido com FastAPI + SQLModel + SQLite. Ajuda estudantes a praticarem conceitos como Máquinas de Turing, indecidibilidade, RE/R, P vs NP, reduções polinomiais, hierarquia de tempo e EXPTIME. Backend serve a API e a interface simples em `/static/index.html`.
 
+
+Video de apresentação: https://www.youtube.com/watch?v=d8waiTivDVI
 ---
 
 # 🔧 Requisitos
@@ -12,7 +14,7 @@ Joguinho gamificado de perguntas & respostas sobre **Computabilidade e Complexid
 
 ---
 
-# 🚀 COMO RODAR O PROJETO (PASSO A PASSO)
+# COMO RODAR O PROJETO (PASSO A PASSO)
 
 ## 1) Clonar o repositório
 git clone https://github.com/VictorMaciel10/Sped-Run-Complexibilidade.git  
@@ -55,7 +57,7 @@ python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
 
 ---
 
-# 🕹️ Jogar o Jogo
+# Jogar o Jogo
 Acesse no navegador:  
 http://127.0.0.1:8000/static/index.html
 
@@ -68,7 +70,7 @@ Fluxo do usuário:
 
 ---
 
-# 📑 Documentação da API (Swagger)
+# Documentação da API 
 http://127.0.0.1:8000/docs
 
 Principais endpoints:
@@ -82,7 +84,7 @@ Principais endpoints:
 
 ---
 
-# 🗄️ Banco de Dados
+# Banco de Dados
 - SQLite (`speedrun.db`)
 - Criado automaticamente
 - Tabelas do projeto:
@@ -94,7 +96,7 @@ Principais endpoints:
 
 ---
 
-# 🎯 O que o jogo ensina
+#  O que o jogo ensina
 - Máquinas de Turing  
 - Problema da Parada  
 - Linguagens R e RE  
@@ -106,7 +108,7 @@ Principais endpoints:
 
 ---
 
-# 🧪 Testes recomendados
+# Testes recomendados
 - Criar usuário novo  
 - Logar com senha errada  
 - Iniciar sessão  
@@ -117,7 +119,7 @@ Principais endpoints:
 
 ---
 
-# 👨‍💻 Autores
+# Autores
 Victor de Souza Maciel 
 Everton Matias Cordeiro de Brito
 Nathan de Oliveira Gomes
