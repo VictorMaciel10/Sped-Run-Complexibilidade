@@ -15,12 +15,27 @@
     .opt:hover{background:#1f2937}
     .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
     .pill{padding:6px 10px;border-radius:999px;background:#1f2937}
+    .header-row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
+    .last-session{font-size:12px;text-align:right}
+    .last-session-title{font-weight:600;margin-bottom:4px}
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Speed Run de Complexidade (🏃‍♂️⚡)</h1>
-    <p id="status">1) Cadastre/Login · 2) Launch · 3) Jogue · 4) Finalize</p>
+
+    <!-- topo: título + último histórico -->
+    <div class="header-row">
+      <div>
+        <h1>Speed Run de Complexidade (🏃‍♂️⚡)</h1>
+        <p id="status">1) Cadastre/Login · 2) Launch · 3) Jogue · 4) Finalize</p>
+      </div>
+      <div class="last-session">
+        <div class="last-session-title">Última sessão</div>
+        <div>Score: <span id="last-score">-</span></div>
+        <div>Tempo: <span id="last-time">-</span> ms</div>
+        <div class="muted" id="last-date">–</div>
+      </div>
+    </div>
 
     <div id="auth">
       <div class="row">
@@ -49,6 +64,7 @@
 
     <pre id="log" class="muted"></pre>
   </div>
+
   <script src="./app.js"></script>
 </body>
 </html>
